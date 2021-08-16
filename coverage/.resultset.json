@@ -1,0 +1,18 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/nicola/projects/bookmark/spec/features/homepage_spec.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1629122274
+  }
+}
