@@ -1,4 +1,6 @@
 <h1>Here is your list of bookmarks:</h1>
 <div>
-  <%=@bookmarks.all%>
+  <%@bookmarks.all.each do |bookmark|%>
+  <li><%=bookmark%></li>
+  <%end%>
 </div>
