@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 ruby '2.7.3'
 
+gem 'pg'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-reloader'

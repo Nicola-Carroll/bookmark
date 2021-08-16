@@ -2,7 +2,7 @@ require 'bookmarks'
 
 describe Bookmarks do
 
-  let(:bookmark_array) { ['www.google.com', 'www.yahoo.co.uk', 'www.bbc.co.uk'] }
+  let(:bookmark_array) { ['http://www.google.com', 'http://www.makersacademy.com'] }
   
   context '#all' do
 

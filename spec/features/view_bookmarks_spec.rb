@@ -1,7 +1,7 @@
 feature "viewing bookmarks" do
 
-  let(:bookmarks) { ['www.google.com', 'www.yahoo.co.uk', 'www.bbc.co.uk'] }
-  
+  let(:bookmarks) { ['http://www.google.com', 'http://www.makersacademy.com'] }
+
   scenario "see bookmarks at the /bookmarks route" do
     visit("/")
     click_button("View Bookmarks")
