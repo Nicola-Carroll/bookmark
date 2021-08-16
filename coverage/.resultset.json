@@ -11,8 +11,58 @@
           null,
           null
         ]
+      },
+      "/Users/edward/Projects/week_four/bookmark/spec/features/view_bookmarks_spec.rb": {
+        "lines": [
+          1,
+          null,
+          2,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/edward/Projects/week_four/bookmark/spec/unit/bookmarks_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/edward/Projects/week_four/bookmark/lib/bookmarks.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1629122963
+    "timestamp": 1629124625
   }
 }
