@@ -18,6 +18,7 @@ require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
 require 'capybara'
 require 'capybara/rspec'
+require 'pg'
 require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
@@ -45,6 +46,11 @@ RSpec.configure do |config|
     # ...rather than:
     #     # => "be bigger than 2"
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+  end
+
+  config.before(:each) do
+    connection = PG.connect(dbname: 'bookmark_manager_test')
+    connection.exec("TRUNCATE bookmarks;")
   end
 
   # rspec-mocks config goes here. You can use an alternate test double

@@ -7,6 +7,10 @@ describe Bookmarks do
   context '#all' do
 
    it 'returns all the bookmarks' do
+    connection = PG.connect(dbname: 'bookmark_manager_test')
+    connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.google.com/');")
+    connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.makersacademy.com/');")
+
     expect(subject.all).to include(bookmark_array[0])
     expect(subject.all).to include(bookmark_array[1])
    end

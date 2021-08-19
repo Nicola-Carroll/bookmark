@@ -1,6 +1,6 @@
 feature "viewing bookmarks" do
 
-  let(:bookmarks) { ['http://www.google.com', 'http://www.makersacademy.com'] }
+  let(:bookmarks) { ['http://www.google.com/', 'http://www.makersacademy.com/'] }
 
   scenario "see bookmarks at the /bookmarks route" do
     visit("/")
@@ -10,6 +10,10 @@ feature "viewing bookmarks" do
   end
 
   scenario "returns a list of bookmarks at /bookmarks" do
+    connection = PG.connect(dbname: 'bookmark_manager_test')
+    connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.google.com/');")
+    connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.makersacademy.com/');")
+
     visit("/")
     click_button("View Bookmarks")
     bookmarks.each do |url|
