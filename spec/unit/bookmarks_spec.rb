@@ -15,6 +15,12 @@ describe Bookmarks do
     expect(subject.all).to include(bookmark_array[1])
    end
 
-  end
+ end
+
+ it "adds a bookmark" do
+  subject.add('www.website.com')
+  expect(subject.all).to include('www.website.com')
+ end
+
 
 end
