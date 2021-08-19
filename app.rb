@@ -10,12 +10,26 @@ class BookmarkManager < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  before do
+    @bookmarks = Bookmarks.instance
+  end
+
   get '/' do
+    @bookmarks = Bookmarks.create
     erb(:index)
   end
 
   get '/bookmarks' do
-    @bookmarks = Bookmarks.new
+    erb(:bookmarks)
+  end
+
+  get '/bookmarks/add' do
+    erb(:add_bookmark)
+  end
+
+  post '/bookmarks' do
+    p params
+    Bookmarks.add(params[:url])
     erb(:bookmarks)
   end
 
