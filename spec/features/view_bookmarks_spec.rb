@@ -1,6 +1,6 @@
 feature "viewing bookmarks" do
 
-  let(:bookmarks) { ['http://www.google.com/', 'http://www.makersacademy.com/'] }
+  let(:bookmarks) { ['Google', 'Makers Academy'] }
 
   scenario "see bookmarks at the /bookmarks route" do
     visit("/")
@@ -10,8 +10,8 @@ feature "viewing bookmarks" do
   end
 
   scenario "returns a list of bookmarks at /bookmarks" do
-    Bookmarks.add('http://www.makersacademy.com/')
-    Bookmarks.add('http://www.google.com/')
+    Bookmarks.add(url: 'http://www.makersacademy.com/', title: 'Makers Academy')
+    Bookmarks.add(url: 'http://www.google.com/', title: 'Google')
 
     visit("/")
     click_button("View Bookmarks")

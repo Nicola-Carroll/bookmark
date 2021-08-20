@@ -3,7 +3,8 @@ feature "Adding a Bookmark " do
     visit ('/')
     click_button('Add new bookmark')
     fill_in('url', with: "www.randomwebsite.com")
+    fill_in('title', with: "Random")
     click_button('Submit')
-    expect(page).to have_content("www.randomwebsite.com")
+    expect(page).to have_content("Random")
   end
 end

@@ -29,7 +29,7 @@ class BookmarkManager < Sinatra::Base
 
   post '/bookmarks' do
     p params
-    Bookmarks.add(params[:url])
+    Bookmarks.add(url: params[:url], title: params[:title])
     erb(:bookmarks)
   end
 
